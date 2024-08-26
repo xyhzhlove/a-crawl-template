@@ -1,0 +1,32 @@
+
+[build-system]
+requires = ["setuptools >= 61", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "automatic_crawler"
+requires-python = ">=3.9"
+dynamic = ["version"]
+
+[project.optional-dependencies]
+all = ["requests", "mariadb"]
+
+[tool.setuptools.dynamic]
+version = { attr = "automatic_crawler.__version__" }
+
+[tool.poetry]
+name = "automatic_crawler"
+
+
+[tool.langserve]
+export_module = "automatic_crawler.__dev__"
+
+
+[tool.pyright]
+include = ["src", "tests"]
+
+
+[tool.ruff]
+line-length = 120
+src = ["src"]

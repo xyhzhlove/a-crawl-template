@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: automatic_crawler
+Version: 0.1.0.dev0
+Requires-Python: >=3.9
+Provides-Extra: all
+Requires-Dist: requests; extra == "all"
+Requires-Dist: mariadb; extra == "all"
